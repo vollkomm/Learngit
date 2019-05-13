@@ -24,8 +24,6 @@
 	（head为当前版本，一个^表示head的前一个版本，两个^^表示head前两个版本，可以标记为head~100表示head前一百个版本）
 	git reset --hard VersionID 也可以写版本ID，可用于回退错误后恢复
 	git reflog 记录了每一步操作及其版本ID，可用于查找要恢复的版本ID
-	git revert <VersionID> 退回中间某次的提交
-	（测试过未通过，提示”error: Reverting is not possible because you have unmerged files.“）
 
 5、暂存区的概念
 	git add 把文件放到暂存区，git commit一次性将暂存区内容提交到默认分支master（git会自动创建一个默认分支）
@@ -37,7 +35,4 @@
 	git checkout -- <filename> 从工作区中撤销，即恢复修改过的文件
 	（注意--和<filename>之间有空格）
 	git reset head <file> 从暂存区中撤销到工作区
-
-8、删除
-	git rm <filename>
 
