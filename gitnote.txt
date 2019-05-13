@@ -7,7 +7,7 @@
 
 2、将文件添加到仓库
 	git add 添加文件
-	git commit -m "comment" 提交（引号内为提交说明）
+	git commit -m "comment" 提交（引号内为提交说明）（不写comment会进入vim编辑器，先按Esc，再按住<Shift>+<z>+<z>退出）
 	（git add可以一次添加多个文件，后，一次提交所有文件）
 	（git add file1.txt file2.txt file3.txt）
 	（git commit -m "comment")
@@ -16,4 +16,11 @@
 	git status 查看状态
 	git diff filename 查看修改内容
 
-4、
+4、版本回退
+	git log 查看提交历史版本信息
+	（git log --pretty=oneline 简略格式）
+	（git log 输出日志s，输出日志后退出q）
+	git reset --hard head^
+	（head为当前版本，一个^表示head的前一个版本，两个^^表示head前两个版本，可以标记为head~100表示head前一百个版本）
+	get reset --hard VersionID 也可以写版本ID，可用于回退错误后恢复
+	get reflog 记录了每一步操作及其版本ID，可用于查找要恢复的版本ID
