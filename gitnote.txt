@@ -36,3 +36,6 @@
 	（注意--和<filename>之间有空格）
 	git reset head <file> 从暂存区中撤销到工作区
 
+8、删除
+	git rm <filename>
+
