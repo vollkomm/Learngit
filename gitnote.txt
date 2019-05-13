@@ -1,0 +1,13 @@
+
+1、创建仓库（repository）
+	mkdir 创建目录
+	git init 创建仓库
+	pwd 显示当前目录
+	（可以用cd命令切换目录）
+
+2、将文件添加到仓库
+	git add 添加文件
+	git commit -m "comment" 提交（引号内为提交说明）
+	（git add可以一次添加多个文件，后，一次提交所有文件）
+	（git add file1.txt file2.txt file3.txt）
+	（git commit -m "comment")
