@@ -11,3 +11,8 @@
 	（git add可以一次添加多个文件，后，一次提交所有文件）
 	（git add file1.txt file2.txt file3.txt）
 	（git commit -m "comment")
+
+3、查看当前工作区（pwd显示目录）状态
+	git status 查看状态
+	git diff filename 查看修改内容
+
