@@ -55,11 +55,16 @@
 	https://blog.csdn.net/scene_2015/article/details/81779543
 
 11、关联多个github账号
-	ssh-keygen -t rsa -C"perfectless@qq.com"
-	ssh-keygen -t rsa -C"3346563533@qq.com"
-	生成两对私钥/公钥(.pub)
-	将公钥内容分别添加到两个账号的github.com/Settings/SSH and GPG Keys
-	创建config文件（文件名即config无扩展名）
+	1）ssh-keygen -t rsa -C"perfectless@qq.com"
+		ssh-keygen -t rsa -C"3346563533@qq.com"
+		生成两个SSH Key
+		将公钥(.pub)内容分别添加到两个账号的github.com/Settings/SSH and GPG Keys
+	2）添加私钥
+		ssh-agent -s 打开ssh-agent
+		ssh-agent bash --login -i 把bash挂到ssh-agent下面
+		ssh-add ~/.ssh/id_rsa_vollkomm 添加私钥
+		ssh-add ~/.ssh/id_rsa_perfectless
+	3）创建config文件（文件名即config无扩展名）
 		# perfectless
 		Host githubperfectless
 		HostName perfectless.github.com
