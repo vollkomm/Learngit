@@ -66,14 +66,28 @@
 		ssh-add ~/.ssh/id_rsa_perfectless
 	3）创建config文件（文件名即config无扩展名）
 		# perfectless
-		Host githubperfectless
-		HostName perfectless.github.com
+		Host gitp
+		HostName github.com
 		User perfectless
 		IdentityFile ~/.ssh/id_rsa_perfectless
 		# vollkomm                                                                           
-		Host githubvollkomm
-		HostName vollkomm.github.com
+		Host githubv
+		HostName github.com
 		User vollkomm
 		IdentityFile ~/.ssh/id_rsa_vollkomm
+	4）测试
+		ssh -T gitp（或perfectless@github.com）
+		（最后测试不成功。提示Permission denied (publickey).）
+		（可以提交，不能用常规方式下载。但可以git clone https://github.com/perfectless/...）
 
-		X
+12、设置用户名（user.name）/邮箱（user.email）
+	git config --global --unset user.name 删除全局用户名（删除后可给不同远程库设置独立的用户名/邮箱）
+	git config --global --unset user.email 删除全局邮箱
+	git config --global user.name <username> 设置全局用户名（登录所有远程库都以此用户）
+	git config --global user.email <email> 设置全局邮箱
+	git config user.name <username> 设置用户名
+	git config user.email <email> 设置邮箱
+	git config user.name 查看用户名
+	（单独设置时需要切换到要设置的远程库，用命令cd在git-bash中切换）
+
+
