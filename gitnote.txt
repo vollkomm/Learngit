@@ -47,3 +47,9 @@
 8、删除
 	git rm <filename>
 
+9、github.com上创建远程库
+
+10、git remote add origin git@github.com:vollkomm/learngit.git 关联远程库
+	git push -u origin master 本地内容推送至远程库
+	（参数-u，第一次推送分支，将本地分支与远程库分支关联起来，以后可省略此参数）
+	https://blog.csdn.net/scene_2015/article/details/81779543
