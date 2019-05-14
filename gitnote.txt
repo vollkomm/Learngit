@@ -8,7 +8,7 @@
 2、将文件添加到仓库
 	git add 添加文件
 	git commit -m "comment" 提交（引号内为提交说明）（不写comment会进入vim编辑器，先按Esc，再按住<Shift>+<z>+<z>退出）
-	（git add可以一次添加多个文件，后，一次提交所有文件）
+	（git add可以添加多个文件，后，一次提交所有文件）
 	（git add file1.txt file2.txt file3.txt）
 	（git commit -m "comment")
 
@@ -53,3 +53,6 @@
 	git push -u origin master 本地内容推送至远程库
 	（参数-u，第一次推送分支，将本地分支与远程库分支关联起来，以后可省略此参数）
 	https://blog.csdn.net/scene_2015/article/details/81779543
+
+11、关联多个github账号
+	
