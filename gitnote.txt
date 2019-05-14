@@ -14,7 +14,7 @@
 
 3、查看当前工作区（pwd显示目录）状态
 	git status 查看状态
-	git diff filename 查看修改内容
+	git diff <filename> 查看修改内容
 
 4、版本回退
 	git log 查看提交历史版本信息
@@ -75,3 +75,5 @@
 		HostName vollkomm.github.com
 		User vollkomm
 		IdentityFile ~/.ssh/id_rsa_vollkomm
+
+		X
