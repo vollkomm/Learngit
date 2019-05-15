@@ -99,6 +99,12 @@
 	（分支并不能监控文件的修改。修改文件后，以哪个分支提交就算哪个分支。可以先修改，再创建分支、提交、合并、删除分支）
 	（还不明白为啥还要多建一个分支？官方为啥建议多用分支？2019515）
 
-14+、重启电脑后，需要ssh-add ~/.ssh/id_rsa_vollkomm才能重新push，clone和pull不受影响
+ques、重启电脑后，需要ssh-add ~/.ssh/id_rsa_vollkomm才能重新push，clone和pull不受影响
 	？？
 
+15、解决merge冲突**
+	https://www.liaoxuefeng.com/wiki/896043488029600/900004111093344
+	手动合并
+	git log --graph --pretty=oneline --abbrev-commit 查看合并情况
+
+16、
