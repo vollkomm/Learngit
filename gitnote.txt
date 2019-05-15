@@ -91,9 +91,10 @@
 13、git clone git@gitv vollkomm/learngit.git 从远程库克隆至本地库
 	git clone https://github.com/perfectless/...）
 
-14、git checkout -b dev 创建并切换到新建分支dev（= git branch dev + git checkout dev）
+14、分支（官方建议多用分支）
+	git checkout -b dev 创建并切换到新建分支dev（= git branch dev + git checkout dev）
 	git branch 查看分支（当前分支以*标记）
 	git merge dev 将分支dev合并到当前分支
 	git branch -d dev 删除分支
-	（分支并不能监控文件的修改。修改文件后，以哪个分支提交就算哪个分支）
-	（还不明白为啥还要多建一个分支？2019515）
+	（分支并不能监控文件的修改。修改文件后，以哪个分支提交就算哪个分支。可以先修改，再创建分支、提交、合并、删除分支）
+	（还不明白为啥还要多建一个分支？官方为啥建议多用分支？2019515）
