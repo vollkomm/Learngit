@@ -5,4 +5,3 @@ Git tracks changes of files.
 Creating a new branch is quick.(dev)
 Creating a new branch is quick.(master)
 master is writing...
-分支管理策略
