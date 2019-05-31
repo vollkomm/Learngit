@@ -88,7 +88,7 @@
 	git config user.name 查看用户名
 	（单独设置时需要切换到要设置的远程库，用命令cd在git-bash中切换）
 
-13、git clone git@gitv vollkomm/learngit.git 从远程库克隆至本地库
+13、git clone git@gitv:vollkomm/learngit.git 从远程库克隆至本地库
 	git clone https://github.com/perfectless/...）
 
 14、分支（官方建议多用分支）
