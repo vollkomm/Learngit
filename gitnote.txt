@@ -7,7 +7,7 @@
 
 2、将文件添加到仓库
 	git add 添加文件
-	git commit -m "comment" 提交（引号内为提交说明）（不写comment会进入vim编辑器，先按Esc，再按住<Shift>+<z>+<z>退出）
+	git commit -m "comment" 提交（引号内为提交说明）（不写comment会进入vim编辑器，先按Esc(住)，再按住<Shift>+<z>+<z>退出）
 	（git add可以添加多个文件，后，一次提交所有文件）
 	（git add file1.txt file2.txt file3.txt）
 	（git commit -m "comment")
