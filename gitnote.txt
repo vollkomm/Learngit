@@ -122,11 +122,12 @@ ques、重启电脑后，需要ssh-add ~/.ssh/id_rsa_vollkomm才能重新push，
 
 16、每次重启git-bash都需要重新添加私钥（11、）。在git-bash安装目录中找到/etc/bash.bashrc在文件末尾添加如下内容，可解决该问题
 	（产生问题的原因 https://segmentfault.com/q/1010000000835302 ）
-	#为了启用gitbash时不需每次重新添加密钥
+	#为了启用gitbash时不需每次重新添加私钥
 	eval "$(ssh-agent -s)"
 	ssh-add ~/.ssh/id_rsa_perfectless
 	ssh-add ~/.ssh/id_rsa_vollkomm
-	但，此时再用vollkomm同步内容（git push origin）时会有如下提示：（暂未找到解决方法）
+	（方法解决：打开git-bash后，自动添加私钥）
+	但，此时再用vollkomm同步内容（git push origin）时会有如下错误提示：（就是说同时用两个github账号时，不适用此方法。该问题暂未找到有效解决办法，只能去掉）
 	ERROR: Permission to vollkomm/learngit.git denied to perfectless.
 	fatal: Could not read from remote repository.
 	Please make sure you have the correct access rights
