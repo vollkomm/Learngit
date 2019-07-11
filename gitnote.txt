@@ -8,7 +8,7 @@
 2、将文件添加到仓库
 	git add 添加文件
 	git commit -m "comment" 提交（引号内为提交说明）（不写comment会进入vim编辑器，先按Esc(住)，再按住<Shift>+<z>+<z>退出）
-	（git add可以添加多个文件，后，一次提交所有文件）
+	（git add可以添加多个文件，后，一次提交所有文件）（git add -A 添加所有文件）
 	（git add file1.txt file2.txt file3.txt）
 	（git commit -m "comment")
 
@@ -50,14 +50,27 @@
 9、github.com上创建远程库
 
 10、git remote add origin git@github.com:vollkomm/learngit.git 关联远程库
+	（若提示fatal: remote origin already exists.，则先git remote rm origin）
 	git push -u origin master 本地内容推送至远程库
 	（参数-u，第一次推送分支，将本地分支与远程库分支关联起来，以后可省略此参数）
 	https://blog.csdn.net/scene_2015/article/details/81779543
+	可能发生的问题：
+		$ git push -u origin master
+		To github.com:perfectless/djstuff.git
+		 ! [rejected]        master -> master (non-fast-forward)
+		error: failed to push some refs to 'git@github.com:perfectless/djstuff.git'
+		hint: Updates were rejected because the tip of your current branch is behind
+		hint: its remote counterpart. Integrate the remote changes (e.g.
+		hint: 'git pull ...') before pushing again.
+		hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+	解决办法：先强制合并远程库 git pull origin master --allow-unrelated-histories
+		再git push
+
 
 11、关联多个github账号
 	1）ssh-keygen -t rsa -C"perfectless@qq.com"
 		ssh-keygen -t rsa -C"3346563533@qq.com"
-		生成两个SSH Key
+		生成两个SSH Key（C:\Users\Administrator\.ssh）
 		将公钥(.pub)内容分别添加到两个账号的github.com/Settings/SSH and GPG Keys
 	2）添加私钥
 		ssh-agent -s 打开ssh-agent
@@ -107,4 +120,9 @@ ques、重启电脑后，需要ssh-add ~/.ssh/id_rsa_vollkomm才能重新push，
 	手动合并
 	git log --graph --pretty=oneline --abbrev-commit 查看合并情况
 
-16、
+16、每次重启git-bash都需要重新添加私钥（11、）。在git-bash安装目录中找到/etc/bash.bashrc在文件末尾添加如下内容，可解决该问题
+	（产生问题的原因 https://segmentfault.com/q/1010000000835302 ）
+	#为了启用gitbash时不需每次重新添加密钥
+	eval "$(ssh-agent -s)"
+	ssh-add ~/.ssh/id_rsa_perfectless
+	ssh-add ~/.ssh/id_rsa_vollkomm
