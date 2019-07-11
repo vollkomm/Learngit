@@ -126,3 +126,8 @@ ques、重启电脑后，需要ssh-add ~/.ssh/id_rsa_vollkomm才能重新push，
 	eval "$(ssh-agent -s)"
 	ssh-add ~/.ssh/id_rsa_perfectless
 	ssh-add ~/.ssh/id_rsa_vollkomm
+	但，此时再用vollkomm同步内容（git push origin）时会有如下提示：（暂未找到解决方法）
+	ERROR: Permission to vollkomm/learngit.git denied to perfectless.
+	fatal: Could not read from remote repository.
+	Please make sure you have the correct access rights
+	and the repository exists.
